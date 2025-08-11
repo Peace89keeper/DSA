@@ -132,38 +132,92 @@ int main()
         }
         cout << endl;
     }
-    //output of 4
-    //1111
-    // 222
-    //  33
-    //   4
+    // output of 4
+    // 1111
+    //  222
+    //   33
+    //    4
 
-    //Q.2.7 Pyramid 
+    // Q.2.7 Pyramid
     int n8;
-    cout << "Enter the fucking no." << endl;
+    cout << "Enter the  no." << endl;
     cin >> n8;
-    for(int i = 1 ; i <= n8 ; i++){
-        for( int j = 0 ; j <= n - i ; j++){
+    for (int i = 0; i < n8; i++)
+    {
+        // spaces (n -i -1)
+        for (int j = 0; j <= n8 - i - 1; j++)
+        {
 
             cout << " ";
         }
 
-        for(int j = 1 ; j <= i ; j++ ){
+        // num of the first triangle
+        for (int j = 1; j <= i; j++)
+        {
             cout << j;
         }
-        
-    for(int i = 1 ; i <= n8 ; i++){
-        for(int j = 1 ; j > 0 ; j--){
-            cout << j;
-        }
-            
 
+        // num of the second triangle
+        for (int j = i - 1; j > 0; j--)
+        {
+            cout << j;
+        }
+        cout << endl;
+        // output of 4
+        //    1
+        //   121
+        //  12321
+        // 1234321
+    }
+
+    // Diamond
+    int n9;
+    cout << "Enter the  no." << endl;
+    cin >> n9;
+    for (int i = 0; i < n9; i++)
+    {
+        // space1
+        for (int j = 0; j < n9 - i - 1; j++)
+        {
+            cout << " ";
+        }
+        // Star1
+
+        cout << "*";
+
+        if (i != 0)
+        {
+            for (int j = 0; j < 2 * i - 1; j++)
+            {
+                cout << " ";
+            }
+
+            cout << "*";
         }
         cout << endl;
     }
 
+    for (int i = 0; i < n9 - 1 ; i++)
+    {
+        // space1
 
-
+        if (i != 0)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                cout << " ";
+            }
+        }
+        cout << "*";
+        
+        if( i != n-2){
+            for (int j = 0; j < 2*(n9-i) -n9  ;j++ ){
+                cout << " ";
+            }
+            cout << "*";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
